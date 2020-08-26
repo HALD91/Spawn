@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Spawn:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Spawn_jar</output-path>
+    <root id="archive" name="Spawn.jar">
+      <element id="module-output" name="Spawn" />
+    </root>
+  </artifact>
+</component>

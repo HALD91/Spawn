@@ -1,0 +1,9 @@
+name: Spawn
+version: 1.0.3
+author: HALD91
+main: Spawn.Main
+api-version: 1.13
+
+commands:
+  spawn:
+    description: use the spawn command to go to spawn.
