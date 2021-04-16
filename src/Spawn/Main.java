@@ -19,6 +19,8 @@ public class Main extends JavaPlugin implements Listener {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         getCommand("spawn").setExecutor(new CommandManager());
+        this.getServer().getPluginManager().registerEvents(new OnFirstJoin(), this);
+        this.getServer().getPluginManager().registerEvents(new OnJoin(), this);
 
     }
 

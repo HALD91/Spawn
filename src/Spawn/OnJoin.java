@@ -12,7 +12,10 @@ public class OnJoin implements Listener {
     @EventHandler
     public void onjoin (PlayerJoinEvent event){
         if (event.getPlayer().hasPlayedBefore()){
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "tp " + event.getPlayer().getName() + " " + String.valueOf(main.getConfig().getString("SpawnLocation")).replace(",", ""));
+            if (event.getPlayer().getWorld().getName() == "world") {
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "tp " + event.getPlayer().getName() + " " + String.valueOf(main.getConfig().getString("SpawnLocation")).replace(",", ""));
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mvtp " + event.getPlayer().getName() + " " + String.valueOf(main.getConfig().getString("SpawnLocationWorld")).replace(",", ""));
+            }
         }
     }
 }
